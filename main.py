@@ -18,11 +18,11 @@ def make_image(date, meal):
     draw = ImageDraw.Draw(img)
     draw.text((560, 100), "오늘(" + date + ")의 급식은...", (0, 0, 0), font=boldFont)
     for i in range(len(meal)):
-        draw.text((550, 190 + 220 * i), meal[i][0], (0, 0, 0), font=mediumFont)
+        draw.text((550, 190 + 250 * i), meal[i][0], (0, 0, 0), font=mediumFont)
         for j in range(len(meal[i][1])):
             text = meal[i][1][j]
             x = 550
-            y = 220 + 220 * i + 30 * j
+            y = 220 + 250 * i + 30 * j
             if j == 0:
                 _, _, text_width, text_height = regularFont.getbbox(text)
                 draw.text((x, y), text, font=regularFont, fill=(0, 0, 0))
